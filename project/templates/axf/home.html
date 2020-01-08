@@ -1,0 +1,65 @@
+{%extends 'axf/base.html' %}
+{% load static from staticfiles %}
+{%block home%}
+
+{%endblock home%}
+
+{%block main%}
+ <div id="home" style="float: left;">
+    <section class="swiper-container" id="topSwiper">
+        <div class="swiper-wrapper">
+            {% for item in wheelsList %}
+            <div class="swiper-slide">
+                    <img src="{{item.img}}" width="100%" />
+            </div>
+            {% endfor%}
+
+        </div>
+        <div class="swiper-pagination" style="float: left;"></div>
+    </section>
+<!--     老师写的导航，从这里第一轮播图偶发非正常显示图片-->
+     <section class="topMenu">
+         <nav>
+             <ul>
+                 {% for item in navList %}
+                 <li>
+                     <a href="/market/{{item.trackid}}/0/0">
+                        <img src="{{item.img}}" />
+                         <span>{{item.name}}</span>
+                     </a>
+
+                 </li>
+                 {% endfor %}
+             </ul>
+         </nav>
+     </section>
+
+
+<!--下面是自己写的导航
+     <div class="" style="background: white;">
+            {% for items in navList %}
+            <div class="" style="display: inline-block;width: 24%;text-align: center; ">
+                    <img src="{{items.img}}" width="50%" /><br/>
+                {{items.name}}
+            </div>
+            {% endfor%}
+
+        </div>-->
+     <!--从这里开始第一轮播图小点失灵,原因是class重名了，从base.html修改一下JS即可-->
+      <menu class="swiper-container1" id="swiperMenu">
+        <ul class="swiper-wrapper" >
+            {% for item in mustbyList %}
+            <li class="swiper-slide">
+                    <img src="{{item.img}}" width="100%" />
+            </li>
+            {% endfor%}
+        </ul>
+
+    </menu>
+
+</div>
+
+
+
+{%endblock main%}
+

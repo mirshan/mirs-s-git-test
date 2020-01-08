@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#home{
+    padding:1.5rem 0;  /*上面有黄条，下面有导航，只处理中间部分*/
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 3rem;  /*屏幕挤出1.5rem，向上padding3rem正好*/
+    position: fixed;
+
+}
+#topSwiper{
+    height: 3.95rem;
+    width: 10rem;  /*屏幕的宽度*/
+    overflow: hidden;
+}
+#topSwiper div a{
+    display: inline-block;
+    height: 3.95rem;
+    width: 10rem;
+}
+#topSwiper img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.topMenu{
+    padding-bottom: 0.1rem;  /*导航与下面必买的间距*/
+}
+.topMenu nav{
+    margin: 0.35rem 0 0.26rem;
+    background: white;
+}
+.topMenu nav ul{
+    display: flex;
+}
+.topMenu nav li{
+    width: 2.5rem;
+    text-align: center;
+    font-size: 0.25rem;
+}
+.topMenu nav li img{
+    width: 50%;
+}
+.topMenu nav span{
+    display: block;
+}
+
+
+#swiperMenu{
+    width:100%;
+    overflow: hidden;
+}
+#swiperMenu li{
+    display: block;
+    width: 100%;
+}
+#swiperMenu li img{
+    width: 100%;
+}

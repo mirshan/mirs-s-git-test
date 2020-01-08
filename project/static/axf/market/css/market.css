@@ -1,0 +1,127 @@
+#market{
+    padding: 1.5rem 0;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+
+aside{
+    width: 2.5rem;
+    float: left;
+    position: relative;
+    background: #fafafa;
+    overflow: hidden;
+    height: 100%;
+}
+aside ul{
+    background: #fafafa;
+}
+aside ul li{
+    list-style: none;
+    text-align: center;
+    border-bottom: 0.04rem solid #e0e0e0;
+    line-height: 1.35rem;
+    width: 2.25rem;
+    position: relative;
+    z-index: +1;
+}
+aside ul li a{
+    display: block;
+    font-size: 0.35rem;
+    color: gray;
+    z-index: +1;
+}
+
+.yellowSlide{
+    background: yellow;
+    width: 0.1rem;
+    height:0.7rem;
+    position: absolute;
+    left: 0;
+    top:0.3rem;
+    display: block;
+}
+
+
+
+section menu > div{
+    position: fixed;
+    top:2.7rem;
+    left: 2.55rem;
+    width: 7.45rem;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    color: grey;
+}
+
+section menu > div >div{
+    background: white;
+    padding-bottom: 0.3rem;
+}
+
+section menu > div >div >a >span{
+    border:0.04rem solid #e0e0e0;
+    padding: 0.1rem 0.2rem;
+}
+
+#snul ul li{
+    height: 0.5rem;
+    width: 3.7rem;
+    border:1px solid white;
+    display: inline-block;
+    line-height: 0.5rem;
+    text-align: center;
+    font-size: 15px;
+}
+
+#typediv{
+    width: 10rem;
+    height: 0.5rem;
+    display: block;
+    line-height: 0.5rem;
+    font-size: 14px;
+}
+#typediv div span{
+    width: 1.5rem;
+    height: 0.35rem;
+    display: inline-block;
+
+
+}
+#sortdiv{
+    width: 10rem;
+    height: 0.5rem;
+    display: inline-block;
+    line-height: 0.5rem;
+    font-size: 14px;
+}
+#sortdiv span{
+    width: 1.5rem;
+    height: 0.35rem;
+    display: inline-block;
+
+}
+/*#prostyle{*/
+/*    display: block;*/
+/*    float: left;*/
+/*    position: absolute;*/
+
+/*}*/
+/*#prostyle img{*/
+/*    width: 1rem;*/
+/*    height: 1rem;*/
+/*    position: absolute;*/
+/*    left: 2.8rem;*/
+/*    margin: 0 0.1rem 0.5rem 0;*/
+/*    display: block;*/
+/*}*/
+/*#prostyle article{*/
+/*    width: 1rem;*/
+/*    height: 1rem;*/
+/*    position: absolute;*/
+/*    left: 3.9rem;*/
+/*    margin: 0 0.1rem 0.5rem 0;*/
+/*    display: block;*/
+/*}*/

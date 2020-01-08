@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+{% load static from staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+
+    <link rel="stylesheet" type="text/css" href="{%static 'axf/main/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'axf/main/css/swiper.min.css'%}">
+    <link rel="stylesheet" type="text/css" href="/static/axf/main/css/reset.css">
+
+    <link rel="stylesheet" type="text/css" href="{%static 'axf/main/css/base.css'%}">
+    <link rel="stylesheet" type="text/css" href="/static/axf/home/css/home.css"/>
+    <link rel="stylesheet" type="text/css" href="{%static 'axf/market/css/market.css'%}"/>
+    <link rel="stylesheet" type="text/css" href="{%static 'axf/mime/css/mime.css'%}"/>
+    <link rel="stylesheet" type="text/css" href="{%static 'axf/mime/css/login.css'%}"/>
+    <link rel="stylesheet" type="text/css" href="{%static 'axf/mime/css/register.css'%}"/>
+    <link rel="stylesheet" type="text/css" href="{%static 'axf/cart/css/cart.css'%}"/>
+
+
+    <!--    <script type="text/javascript" charset="utf-8" src="{%static 'axf/market/js/market.js'%}"></script>-->
+
+    <!--    <script type="text/javascript" charset="utf-8" src="static/axf/market/js/market.js"></script>-->
+
+
+    <script src="{%static 'axf/main/js/jquery-3.4.1.js'%}"></script>
+    <script type="text/javascript" charset="utf-8" src="{%static 'axf/main/js/bootstrap.min.js'%}"></script>
+    <script type="text/javascript" charset="utf-8" src="/static/axf/main/js/swiper.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="{%static 'axf/main/js/base.js'%}"></script>
+    <script type="text/javascript" src="/static/axf/market/js/market.js"></script>
+    <script type="text/javascript" src="/static/axf/mime/js/register.js"></script>
+
+    <style type="text/css">
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>
+
+<header>
+
+</header>
+<div class="main">
+    {%block main%}
+
+    {%endblock main%}
+</div>
+<footer>
+    <a href="/home/" class="home">
+        <dl>
+            <dt><span></span></dt>
+            <dd>主页</dd>
+        </dl>
+    </a>
+
+    <a href="/market/1/0/0" class="market">
+        <dl>
+            <dt><span></span></dt>
+            <dd>闪送超市</dd>
+        </dl>
+    </a>
+
+    <a href="/cart/" class="cart">
+        <dl>
+            <dt><span></span></dt>
+            <dd>购物车</dd>
+        </dl>
+    </a>
+
+    <a href="/mime/" class="mime">
+        <dl>
+            <dt><span></span></dt>
+            <dd>我的</dd>
+        </dl>
+    </a>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                dynamicBullets: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+
+        var swiper = new Swiper('.swiper-container1', {
+            slidesPerView: 3,
+            spaceBetween: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: '.swiper-pagination1',
+                dynamicBullets: true,
+            },
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+
+</footer>
+</body>
+</html>

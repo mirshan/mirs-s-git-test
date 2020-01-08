@@ -1,0 +1,36 @@
+{%extends 'axf/base.html' %}
+{% load static from staticfiles %}
+{%block linkscript%}
+<link rel="stylesheet" type="text/css" href="{%static 'mime/css/login.css' %}">
+<!--<script type="text/javascript" charset="utf-8" src="{%static 'mime/js/login.js' %}" ></script>-->
+{%endblock linkscript%}
+
+
+{%block main%}
+<div id="login">
+    <a href="/mime/">返回</a>
+    <div id="box">
+        <form action="/login/" method="post">
+            {%csrf_token%}
+            <div class="input-group">
+                账号：{{form.username}}
+                <br>
+               {%if error.username.0%}     <!-- 如果error有错误的话-->
+                <span>{{error.username.0}}</span>
+                {%endif%}
+            </div>
+            <div class="input-group">
+                密码：{{form.passwd}}
+                <br>
+               {%if error.passwd.0%}     <!-- 如果error有错误的话-->
+                <span>{{error.passwd.0}}</span>
+                {%endif%}
+            </div>
+            <div>
+                <input type="submit" value="提交" name="">
+            </div>
+        </form>
+    </div>
+
+</div>
+{%endblock main%}

@@ -1,0 +1,89 @@
+{%extends 'axf/base.html' %}
+{% load static from staticfiles %}
+
+{%block market%}
+
+{%endblock market%}
+
+
+
+{%block main%}
+
+<div id="market">
+
+    <aside>
+        <menu>
+            <ul>
+                {%for item in leftSilder%}
+                <li>
+                    <span class="yellowSlide"></span>
+                    <a href="/market/{{item.typeid}}/0/0/">
+                        {{item.typename}}
+                    </a>
+                </li>
+                {%endfor%}
+            </ul>
+        </menu>
+    </aside>
+<setion>
+    <nav id="snul">
+        <ul>
+            <li>
+                <span id="alltypebtn">全部类型<span class="glyphicon glyphicon-chevron-down" style="font-weight: 100;"></span></span>
+            </li>
+            <li>
+                <span id="showsortbtn">综合排序<span class="glyphicon glyphicon-chevron-down" style="font-weight: 100;display: inline-block;"></span> </span>
+            </li>
+        </ul>
+    </nav>
+
+    <menu>
+        <!--分类选择-->
+    <div id="typediv">
+        <div>
+        {%for item in childList%}
+        <a href="/market/{{categoryid}}/{{item.childId}}/0" onclick=""><span>{{item.childName}}</span></a>
+        {%endfor%}
+        </div>
+    </div>
+    <!--排序-->
+    <div id="sortdiv">
+        <a href="/market/{{categoryid}}/{{cid}}/0" class="sorta"><span>综合排序</span></a>
+        <a href="/market/{{categoryid}}/{{cid}}/1" class="sorta"><span>销量排序</span></a>
+        <a href="/market/{{categoryid}}/{{cid}}/2" class="sorta"><span>价格最低</span></a>
+        <a href="/market/{{categoryid}}/{{cid}}/3" class="sorta"><span>价格最高</span></a>
+    </div>
+        <ul>
+            {%for item in productList%}
+            <li id="prostyle"  >
+                <a href="">
+                    <img src="{{item.productimg}}" style="width: 1rem;height: 1rem; left:3rem;"/>
+                    <article class="shoppingInfo">
+                        <h6>{{item.productlongname}}</h6>
+                        <p class="detailTag">
+                            <span>精选</span>
+                            <span>{{item.pmdesc}}</span>
+                        </p>
+                        <span class="unit">{{item.specifics}}</span>
+                        <p class="price"><span>￥{{item.price}}</span><s><span>￥{{item.marketprice}}</span></s></p>
+                    </article>
+                </a>
+
+                <section>
+                    <button ga="{{item.productid}}" class="subShopping">-</button>
+                    <span id="{{item.productid}}">0</span>
+                    <button ga="{{item.productid}}" class="addShopping">+</button>
+                </section>
+            </li>
+            {%endfor%}
+        </ul>
+
+
+
+    </menu>
+
+
+</setion>
+
+</div>
+{%endblock main%}
